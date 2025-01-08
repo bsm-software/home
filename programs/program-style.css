@@ -2,4 +2,64 @@ body {
     color: white;
     background-color: black;
     text-align: center;
+    margin-bottom: 50px;
+}
+
+#header {
+    background-color: #0066cc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+#department {
+    font-size: 36pt;
+    font-weight: bold;
+}
+#presents {
+    font-size: 16pt;
+    font-style: italic;
+}
+#title {
+    font-size: 28pt;
+}
+#featuring {
+    font-size: 16pt;
+    font-style: italic;
+}
+#name {
+    font-size: 24pt;
+}
+#program-order {
+    border-radius: 15px;
+    background-color: darkblue;
+    padding: 10px 50px 10px 50px;
+    list-style-type: none;
+}
+#program-order > li {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px 10px 0px;
+}
+.piece-title {
+    text-align: left;
+}
+.piece-composer {
+    text-align: right;
+}
+#logo {
+    width: 50vw;
+    padding: 20px;
+    border-radius: 10px;
+    background-color:#0066cc;
+}
+#thanks {
+    font-style: italic;
+}
+@media (max-width: 480px) {
+    body {
+        background-color: darkred;
+    }
 }
