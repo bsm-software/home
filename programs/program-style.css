@@ -21,7 +21,7 @@ body {
     font-style: italic;
 }
 #title {
-    font-size: 6vw;
+    font-size: 8vw;
     font-weight: bold;
 }
 #featuring {
@@ -29,10 +29,10 @@ body {
     font-style: italic;
 }
 #name {
-    font-size: 5vw;
+    font-size: 6vw;
 }
 #location {
-    font-size: 2.5vw;
+    font-size: 3vw;
 }
 #program-order {
     border-radius: 15px;
@@ -51,15 +51,15 @@ body {
     margin: 10px 0px 10px 0px;
 }
 .piece-title {
-    font-size: 3vw;
+    font-size: 3.5vw;
     text-align: left;
 }
 .piece-composer {
-    font-size: 3vw;
+    font-size: 3.5vw;
     text-align: right;
 }
 #logo {
-    width: 50vw;
+    width: 25vw;
     padding: 20px;
     border-radius: 10px;
     background-color:#0066cc;
