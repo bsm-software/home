@@ -8,8 +8,9 @@ body {
 #header {
     background-color: #0066cc;
     padding: 20px;
-    margin-bottom: 20px;
+    border: 2pt solid white;
     border-radius: 15px;
+    margin-bottom: 20px;
 }
 
 #department {
@@ -35,25 +36,45 @@ body {
 #location {
     font-size: 3vw;
 }
-#program-order {
+#program {
+    border: 2pt solid white;
     border-radius: 15px;
     background-color: darkblue;
-    padding: 10px 50px 10px 50px;
+    padding: 20px;
+}
+#program-order {
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
     list-style-type: none;
+}
+#program-order a {
+    color: inherit;
+    text-decoration: none;
 }
 #program > h1 {
     font-size: 6vw;
-}
-#program-order > li {
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0px 10px 0px;
+}    
+.item {
+    background-color: #0066cc;
+    border-radius: 15pt;
+    padding: 30px;
+    margin-top: 20px;
 }
 .piece {
-    font-size: 4vw;
+    font-size: 4.15vw;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
+.supplement {
+    font-size: 3vw;
+    text-align: center;
+    font-style: italic;
+    padding-top: 10px;
+}
+
 .piece.title {
     text-align: left;
 }
@@ -63,10 +84,12 @@ body {
 #logo {
     width: 25vw;
     padding: 20px;
+    margin: 20px;
     border-radius: 10px;
     background-color:#0066cc;
 }
 #thanks {
+    margin: 0px 20px 20px 20px;
     font-size: 3vw;
     font-style: italic;
 }
