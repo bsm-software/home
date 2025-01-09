@@ -58,7 +58,7 @@ body {
 #thanks {
     font-style: italic;
 }
-@media (max-width: 480px) {
+@media (width <= 700px) {
     body {
         background-color: darkred;
     }

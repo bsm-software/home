@@ -4,9 +4,6 @@ body {
 }
 
 .navbar {
-    margin: 0px;
-}
-.navbar-menu {
     display: flex;
     justify-content: space-evenly;
     gap: 10px;
