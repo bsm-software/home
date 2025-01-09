@@ -21,7 +21,7 @@ body {
     font-style: italic;
 }
 #title {
-    font-size: 8vw;
+    font-size: 10vw;
     font-weight: bold;
 }
 #featuring {
@@ -50,12 +50,13 @@ body {
     align-items: center;
     margin: 10px 0px 10px 0px;
 }
-.piece-title {
-    font-size: 3.5vw;
+.piece {
+    font-size: 4vw;
+}
+.piece.title {
     text-align: left;
 }
-.piece-composer {
-    font-size: 3.5vw;
+.piece.composer {
     text-align: right;
 }
 #logo {
