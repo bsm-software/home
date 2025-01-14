@@ -9,9 +9,11 @@ body {
     --dark-true-blue: #002277;
     --xdark-true-blue: #001166;
 
+    --reveal-duration: 1s;
     --reveal-delay-1: 2s;
     --reveal-delay-2: 3s;
     --reveal-delay-3: 4s;
+    --reveal-delay-4: 5s;
 }
 
 @keyframes fade-in {
@@ -43,7 +45,7 @@ body {
 
     color: transparent;
     animation: fade-in;
-    animation-duration: 2s;
+    animation-duration: var(--reveal-duration);
     animation-delay: var(--reveal-delay-1);
     animation-fill-mode: forwards;
 }
@@ -53,7 +55,7 @@ body {
 
     color: transparent;
     animation: fade-in;
-    animation-duration: 2s;
+    animation-duration: var(--reveal-duration);
     animation-delay: var(--reveal-delay-2);
     animation-fill-mode: forwards;
 }
@@ -63,7 +65,7 @@ body {
 
     color: transparent;
     animation: fade-in;
-    animation-duration: 2s;
+    animation-duration: var(--reveal-duration);
     animation-delay: var(--reveal-delay-2);
     animation-fill-mode: forwards;
 }
@@ -75,7 +77,7 @@ body {
 
     color: transparent;
     animation: fade-in;
-    animation-duration: 2s;
+    animation-duration: var(--reveal-duration);
     animation-delay: var(--reveal-delay-2);
     animation-fill-mode: forwards;
 }
@@ -85,15 +87,21 @@ body {
 
     color: transparent;
     animation: fade-in;
-    animation-duration: 2s;
+    animation-duration: var(--reveal-duration);
     animation-delay: var(--reveal-delay-3);
     animation-fill-mode: forwards;
 }
 #program-page {
+    color: transparent;
     background-image: linear-gradient(var(--xdark-true-blue), black);
     border: 2pt solid white;
     border-radius: 15px;
     padding: 20px;
+
+    animation: fade-in;
+    animation-fill-mode: forwards;
+    animation-duration: var(--reveal-duration);
+    animation-delay: var(--reveal-delay-4);
 }
 #program-page h1 {
     font-size: 8vw;
