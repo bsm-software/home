@@ -8,6 +8,15 @@ body {
     --true-blue: #0066cc;
     --dark-true-blue: #002277;
     --xdark-true-blue: #001166;
+
+    --reveal-delay-1: 2s;
+    --reveal-delay-2: 3s;
+    --reveal-delay-3: 4s;
+}
+
+@keyframes fade-in {
+    from { color: transparent; }
+    to { color: white; }
 }
 
 #header {
@@ -31,24 +40,54 @@ body {
     font-size: 10vw;
     font-weight: bold;
     margin: 40pt;
+
+    color: transparent;
+    animation: fade-in;
+    animation-duration: 2s;
+    animation-delay: var(--reveal-delay-1);
+    animation-fill-mode: forwards;
 }
 #featuring {
     font-size: 3vw;
     font-style: italic;
+
+    color: transparent;
+    animation: fade-in;
+    animation-duration: 2s;
+    animation-delay: var(--reveal-delay-2);
+    animation-fill-mode: forwards;
 }
 #name {
     font-size: 6vw;
     margin-bottom: 0px;
+
+    color: transparent;
+    animation: fade-in;
+    animation-duration: 2s;
+    animation-delay: var(--reveal-delay-2);
+    animation-fill-mode: forwards;
 }
 #instrument {
     margin-top: 0.75rem;
     margin-bottom: 3rem;
     font-size: 4vw;
     font-style: italic;
+
+    color: transparent;
+    animation: fade-in;
+    animation-duration: 2s;
+    animation-delay: var(--reveal-delay-2);
+    animation-fill-mode: forwards;
 }
 #location {
     margin-top: 5rem;
     font-size: 3vw;
+
+    color: transparent;
+    animation: fade-in;
+    animation-duration: 2s;
+    animation-delay: var(--reveal-delay-3);
+    animation-fill-mode: forwards;
 }
 #program-page {
     background-image: linear-gradient(var(--xdark-true-blue), black);
