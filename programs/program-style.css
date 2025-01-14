@@ -164,6 +164,13 @@ body {
     transition: height 1s;
     overflow: hidden;
 }
+.fade-footer {
+    opacity: 0;
+    animation: fade-in;
+    animation-fill-mode: forwards;
+    animation-duration: var(--reveal-duration);
+    animation-delay: var(--reveal-delay-4);
+}
 #logo {
     width: 25vw;
     padding: 20px;
