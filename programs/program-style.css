@@ -101,16 +101,18 @@ body {
     font-style: italic;
     padding-top: 10px;
 }
-
-hr {
+.program-notes hr {
     width: 75%;
+    margin: 30px auto 30px auto;
 }
 .info {
     font-size: 4.5vw;
     text-align: justify;
 
     height: 0px;
-    transition: height 1s, background-image 1s;
+    padding: 0px;
+    margin: 0px;
+    transition: height 1s;
     overflow: hidden;
 }
 #logo {

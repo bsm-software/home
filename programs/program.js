@@ -13,11 +13,25 @@ function reveal(id) {
         return;
     }
 
-    let text = content.children.item(0);
-    let height = text.offsetHeight;
+    let programNotes = content.children.item(0);
+    let height = programNotes.offsetHeight;
 
-    content.setAttribute('style', 'height: ' + (height + 20) + 'px;');
+    for (i = 0; i < programNotes.children.length; i++) {
+        let child = programNotes.children.item(i);
+        if (child.classList.contains('separator')) {
+            height += child.offsetHeight;
+            let style = getComputedStyle(child);
+            let verticalMargin = parseInt(style.marginTop);
+            console.log("Vertical margin = " + verticalMargin);
+            height += verticalMargin;
+        }
+    }
+
+    content.setAttribute('style', 'height: ' + height + 'px;');
     content.classList.add('open');
+
+    let item = content.parentElement;
+    item.style.backgroundImage = "linear-gradient(var(--dark-true-blue), var(--true-blue))";
 }
 function conceal(id) {
     let content = document.getElementById(id);
@@ -27,4 +41,7 @@ function conceal(id) {
 
     content.setAttribute('style', 'height: 0px');
     content.classList.remove('open');
+
+    let item = content.parentElement;
+    item.style.backgroundImage = "linear-gradient(var(--true-blue), var(--dark-true-blue))";
 }
