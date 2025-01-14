@@ -13,6 +13,7 @@
             <p id="title">Rosewood<br>and<br>Kettles</p>
             <p id="featuring">featuring</p>
             <p id="name">Brian Mueller</p>
+            <p id="instrument">marimba and timpani</p>
             <p id="location">
                 Thursday January 30, 2025<br>
                 8:00pm<br>
@@ -20,29 +21,68 @@
             </p>
         </div>
 
-        <div id="program">
+        <div id="program-page">
             <h1>Program</h1>
+            <div class="instructions">Tap a piece to access program notes.</div>
             <ul id="program-order">
-                <li class="item">
-                    <div class="piece"><div class="title">Be Thou My Vision</div><div class="composer">Traditional,<br>arr. Brian Mueller (b. 1983)</div></div>
+                <li class="item" onclick="toggle('item1');">
+                    <div class="piece"><div class="title">Be Thou My Vision</div><div class="composer">Traditional,<br>arr. Brian Mueller<br>(b. 1983)</div></div>
+                    <div id='item1' class="info">
+                        <div class="expander">
+                            <hr>
+                            This piece was written for a former student who competed in the AACS Music Competition and won first place in 2018.  I have blah blah blah stuff more stuff...
+                        </div>
+                    </div>
                 </li>
-                <li class="item">
-                    <div class="piece"><div class="title">Three Spirals</div><div class="composer">Éric Sammut (b. 1968)</div></div>
+                <li class="item" onclick="toggle('item2');">
+                    <div class="piece"><div class="title">Three Spirals</div><div class="composer">Éric Sammut<br>(b. 1968)</div></div>
+                    <div id="item2" class="info">
+                        <div class="expander">
+                            <hr>
+                            I have always admired the music of Eric Sammut.  I was in the audience at PASIC 2009 when he premiered the <i>Three Spirals</i>, and later performed them on a recital at Indiana Univesity.  It has been a pleasure to revisit these pieces after so long.  The Spirals are connected both thematically and harmonically, but each takes on its own character.
+                        </div>
+                    </div>
                 </li>
-                <li class="item">
-                    <div class="piece"><div class="title">Forgotten Days of Fall</div><div class="composer">Daniel Cathey (b. 1984)</div></div>
+                <li class="item" onclick="toggle('item3');">
+                    <div class="piece"><div class="title">Forgotten Days of Fall</div><div class="composer">Daniel Cathey<br>(b. 1984)</div></div>
+                    <div id="item3" class="info">
+                        <div class="expander">
+                            <hr>
+                            Daniel Cathey and I were classmates at Wichita State University.  He wrote this piece during his sophomore year, and I was always captivated by the nostalgic feeling the piece evokes.
+                        </div>
+                    </div>
                 </li>
-                <li class="item">
-                    <div class="piece"><div class="title">Pentagonal Cauldron</div><div class="composer">Paul Osterfield (b. 1973)</div></div>
-                    <div class="supplement">world premiere</div>
+                <li class="item" onclick="toggle('item4');">
+                    <div class="piece"><div class="title">Pentagonal Cauldron</div><div class="composer">Paul Osterfield<br>(b. 1973)</div></div>
+                    <div class="premiere">world premiere</div>
+                    <div id="item4" class="info">
+                        <div class="expander">
+                            <hr>
+                            This piece was written for me a couple years ago and I'm excited to finally be able to share it with the world!  Movements: 
+                        </div>
+                    </div>
                 </li>
-                <li class="item">
-                    <div class="piece"><div class="title">Merlin</div><div class="composer">Andrew Thomas (b. 1939)</div></div>
+                <li class="item" onclick="toggle('item5');">
+                    <div class="piece"><div class="title">Merlin</div><div class="composer">Andrew Thomas<br>(b. 1939)</div></div>
+                    <div id="item5" class="info">
+                        <div class="expander">
+                            <hr>
+                            <i>Merlin</i> was written for marimbist William Moersch in 1987.  It is inspired by the poem <i>Merlin</i> by Robert Something.  The piece is divided into two movements, which draw inspiration from the following quotes, which are meant to set the mood for each section of the piece:<br><br>
+                            I. Gawaine!  Blah Blah Blah!<br><br>
+                            II. Times way is not our way
+                        </div>
+                    </div>
                 </li>
-                <a href="../index.html"><li class="item">
+                <li class="item" onclick="toggle('item6');">
                     <div class="piece"><div class="title">Tribute</div><div class="composer">Brian Mueller</div></div>
-                    <div class="supplement">world premiere</div>
-                </li></a>
+                    <div class="premiere">world premiere</div>
+                    <div id="item6" class="info">
+                        <div class="expander" style="text-align: center">
+                            <hr>
+                            ...
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -51,6 +91,8 @@
         <p id="thanks">
             I would like to thank my colleagues and students for their support and inspiration over the past 10 years.
         </p>
+
+        <script type="text/javascript" src="./program.js"></script>
     </body>
 </html>
 

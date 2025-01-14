@@ -1,16 +1,22 @@
 body {
+    font-family: sans-serif;
     color: white;
     background-color: black;
     text-align: center;
     margin-bottom: 50px;
+
+    --true-blue: #0066cc;
+    --dark-true-blue: #002277;
+    --xdark-true-blue: #001166;
 }
 
 #header {
-    background-color: #0066cc;
+    background-image: linear-gradient(var(--true-blue), var(--dark-true-blue));
     padding: 20px;
     border: 2pt solid white;
     border-radius: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 50px;
 }
 
 #department {
@@ -32,16 +38,32 @@ body {
 }
 #name {
     font-size: 6vw;
+    margin-bottom: 0px;
+}
+#instrument {
+    margin-top: 0.75rem;
+    margin-bottom: 3rem;
+    font-size: 4vw;
+    font-style: italic;
 }
 #location {
+    margin-top: 5rem;
     font-size: 3vw;
 }
-#program {
+#program-page {
+    background-image: linear-gradient(var(--xdark-true-blue), black);
     border: 2pt solid white;
     border-radius: 15px;
-    background-color: darkblue;
     padding: 20px;
 }
+#program-page h1 {
+    font-size: 8vw;
+}
+#program-page .instructions {
+    font-size: 4.5vw;
+    padding-bottom: 20px;
+}
+
 #program-order {
     border-radius: 15px;
     padding-left: 20px;
@@ -52,41 +74,51 @@ body {
     color: inherit;
     text-decoration: none;
 }
-#program > h1 {
-    font-size: 6vw;
-}    
+
 .item {
-    background-color: #0066cc;
+    background-image: linear-gradient(var(--true-blue), var(--dark-true-blue));
     border-radius: 15pt;
-    padding: 30px;
+    padding: 3rem;
     margin-top: 20px;
 }
 .piece {
-    font-size: 4.15vw;
+    font-size: 4.5vw;
     display: flex;
-    gap: 20px;
+    gap: 10px;
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
 }
-.supplement {
-    font-size: 3vw;
+.title {
+    text-align: left;
+    font-weight: bolder;
+}
+.composer {
+    text-align: right;
+}
+.premiere {
+    font-size: 4vw;
     text-align: center;
     font-style: italic;
     padding-top: 10px;
 }
 
-.piece.title {
-    text-align: left;
+hr {
+    width: 75%;
 }
-.piece.composer {
-    text-align: right;
+.info {
+    font-size: 4.5vw;
+    text-align: justify;
+
+    height: 0px;
+    transition: height 1s, background-image 1s;
+    overflow: hidden;
 }
 #logo {
     width: 25vw;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
-    background-color:#0066cc;
+    background-image: linear-gradient(var(--true-blue), var(--xdark-true-blue));
 }
 #thanks {
     margin: 0px 20px 20px 20px;
