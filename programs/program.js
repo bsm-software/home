@@ -22,7 +22,6 @@ function reveal(id) {
             height += child.offsetHeight;
             let style = getComputedStyle(child);
             let verticalMargin = parseInt(style.marginTop);
-            console.log("Vertical margin = " + verticalMargin);
             height += verticalMargin;
         }
     }
@@ -44,4 +43,38 @@ function conceal(id) {
 
     let item = content.parentElement;
     item.style.backgroundImage = "linear-gradient(var(--true-blue), var(--dark-true-blue))";
+}
+function secret(id) {
+    const hour = 11;
+    const min = 26;
+
+    let now = new Date(Date());
+    let mHour = 24 - (12 - hour);
+
+    let sameHourTrigger = now.getHours() == mHour && now.getMinutes() >= min;
+    let nextHourTrigger = now.getHours() > mHour;
+
+    if (sameHourTrigger || nextHourTrigger) {
+        conceal(id);
+        updateTitle(id, "I - IV the Davilas");
+        flashItem(id); 
+    } else {
+        toggle(id);
+    }
+}
+
+function updateTitle(id, newName) {
+    let content = document.getElementById(id);
+    let item = content.parentElement;
+    let piece = item.getElementsByClassName("title")[0];
+    piece.innerHTML = newName;
+}
+function flashItem(id) {
+    let content = document.getElementById(id);
+    let item = content.parentElement;
+
+    item.style.backgroundColor = "white";
+    item.style.transition = "background-color 10s";
+    item.style.backgroundImage = "none";
+    item.style.backgroundColor = "#FF0000";
 }

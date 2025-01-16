@@ -15,7 +15,7 @@ body {
     --reveal-delay-3: 1.8s;
     --reveal-delay-4: 2.2s;
 
-    --note-open-duration: 0.5s;
+    --note-open-duration: 1s;
 }
 
 @keyframes fade-in {
@@ -112,6 +112,7 @@ body {
 #program-page .instructions {
     font-size: 4.5vw;
     padding-bottom: 20px;
+    font-style: italic;
 }
 
 #program-order {
@@ -130,6 +131,8 @@ body {
     border-radius: 15pt;
     padding: 3rem;
     margin-top: 20px;
+
+    background-color: white;
 }
 .piece {
     font-size: 4.5vw;
