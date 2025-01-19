@@ -22,64 +22,66 @@
         </div>
 
         <div id="program-page">
-            <h1 class="fadeout">Program</h1>
-            <div class="instructions fadeout">Tap a piece to access program notes.</div>
+            <h1>Program</h1>
+            <div class="instructions">Tap a piece to access program notes.</div>
             <ul id="program-order">
-                <li class="item fadeout" onclick="toggle('item1');">
+                <li id="item1" class="item" onclick="toggle('item1');">
                     <div class="piece"><div class="title">Be Thou My Vision</div><div class="composer">Traditional,<br>arr. Brian Mueller<br>(b. 1983)</div></div>
-                    <div id='item1' class="info">
-                        <div class="program-notes">
+                    <div class="program-notes">
+                        <div class="note-container">
                             <hr class="separator">
                             I wrote this arrangement in 2018 for a student of mine who competed in the American Association of Christian Schools National Music Competition during her senior year of high school.  <i>Be Thou My Vision</i> was her favorite hymn.  In April of that year, she took first place in the Percussion Solo category of the competition with her performance of this arrangement.  The arrangement is divided into three large sections, each in a different key (D, F, and A).
                         </div>
                     </div>
                 </li>
-                <li class="item fadeout" onclick="toggle('item2');">
+                <li id="item2" class="item" onclick="toggle('item2');">
                     <div class="piece"><div class="title">Three Spirals</div><div class="composer">Éric Sammut<br>(b. 1968)</div></div>
-                    <div id="item2" class="info">
-                        <div class="program-notes">
+                    <div class="program-notes">
+                        <div class="note-container">
                             <hr class="separator">
                             I have always admired the music of Éric Sammut.  He was one of the first great marimbists I ever saw perform live, and I had the special priviledge of spending a week with him in Paris while gathering research for my dissertation.  I was in the audience at PASIC in 2005 when Sammut premiered the Three Spirals.  The Spirals, like many of his pieces, utilize jazz-inspired harmonies while blending melody and accompaniment in an ideosyncratic style.  While the Spirals can be considered separate pieces (rather than three movements of one larger piece), nonetheless the Spirals share motivic and harmonic content, and are considered by Sammut to be 'connected.'
                         </div>
                     </div>
                 </li>
-                <li class="item fadeout" onclick="toggle('item3');">
+                <li id="item3" class="item" onclick="toggle('item3');">
                     <div class="piece"><div class="title">Forgotten Days of Fall</div><div class="composer">Daniel Cathey<br>(b. 1984)</div></div>
-                    <div id="item3" class="info">
-                        <div class="program-notes">
+                    <div class="program-notes">
+                        <div class="note-container">
                             <hr class="separator">
                             Daniel Cathey and I were classmates at Wichita State University.  <i>Forgotten Days of Fall</i> was written during Daniel's sophomore year, and evokes a deep sense of nostalgia that I have always found captivating.  It has been a pleasure to revisit this piece after so many years.
                         </div>
                     </div>
                 </li>
-                <li class="item fadeout" onclick="toggle('item4');">
+                <li id="item4" class="item" onclick="toggle('item4');">
                     <div class="piece"><div class="title">Pentagonal Cauldron</div><div class="composer">Paul Osterfield<br>(b. 1973)</div></div>
                     <div class="premiere">world premiere</div>
-                    <div id="item4" class="info">
-                        <div class="program-notes">
+                    <div class="program-notes">
+                        <div class="note-container">
                             <hr class="separator">
                             Paul Osterfield approached me with the idea of composing a timpani solo several years ago, and presented me with a first draft in 2023.  The piece is divided into five separate movements, each of which captures a very different mood and color.<br><br>
 
-                            I. This movement utilizes mallets, hands, and brushes on the drums.<br><br>
+                            <div class="note-inset">
+                                I. This movement utilizes mallets, hands, and brushes on the drums.<br><br>
 
-                            II. Each of the drums is prepared for this movement.  The preparations include inverted cymbals, crotales, and three prayer bowls.<br><br>
+                                II. Each of the drums is prepared for this movement.  The preparations include inverted cymbals, crotales, and three prayer bowls.<br><br>
 
-                            III. This movement makes use of mallets as well as timbale sticks, as well as a large number of tuning changes in quick succession.<br><br>
+                                III. This movement makes use of mallets as well as timbale sticks, as well as a large number of tuning changes in quick succession.<br><br>
 
-                            IV. This slow movement is played with rolls throughout, with many glissandi creating a haunting atmosphere.<br><br>
+                                IV. This slow movement is played with rolls throughout, with many glissandi creating a haunting atmosphere.<br><br>
 
-                            V. The final movement utilizes wooden mallets, and is agressive, energetic, and exciting.
+                                V. The final movement utilizes wooden mallets, and is agressive, energetic, and exciting.
+                            </div>
                         </div>
                     </div>
                 </li>
-                <li class="item fadeout" onclick="toggle('item5');">
+                <li id="item5" class="item" onclick="toggle('item5');">
                     <div class="piece"><div class="title">Merlin</div><div class="composer">Andrew Thomas<br>(b. 1939)</div></div>
-                    <div id="item5" class="info">
-                        <div class="program-notes">
+                    <div class="program-notes">
+                        <div class="note-container">
                             <hr class="separator">
                             Commissioned by William Moersch, <i>Merlin</i> was composed in 1985, and is inspired by Edwin Arlington Robinson's poem of the same name.  The piece is divided into two movements: a slow, foreboding chorale, followed by a faster, rhythmic movement that is "concerned with time and the dissolution of order during time's passage."  An excerpt from Robinson's poem is provided to set the mood for each of the two movements:<br><br>
 
-                            <div id="note-inset">
+                            <div class="note-inset">
                             I.<br><br>
                             "GAWAINE, GAWAINE, what look ye for to see,<br>
                             So far beyond the faint edge of the world?<br>
@@ -100,11 +102,11 @@
                         </div>
                     </div>
                 </li>
-                <li class="item" onclick="secret('item6');">
+                <li id="item6" class="item secret" onclick="secret('item6');">
                     <div class="piece"><div class="title">Tribute</div><div class="composer">Brian Mueller</div></div>
                     <div class="premiere">world premiere</div>
-                    <div id="item6" class="info">
-                        <div class="program-notes" style="text-align: center">
+                    <div class="program-notes">
+                        <div class="note-container" style="text-align: center">
                             <hr class="separator">
                             ...
                         </div>

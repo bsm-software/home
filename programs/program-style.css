@@ -94,6 +94,8 @@ body {
     animation-delay: var(--reveal-delay-3);
     animation-fill-mode: forwards;
 }
+
+
 #program-page {
     background-image: linear-gradient(var(--xdark-true-blue), black);
     border: 2pt solid white;
@@ -127,12 +129,20 @@ body {
 }
 
 .item {
+    background-color: white;
     background-image: linear-gradient(var(--true-blue), var(--dark-true-blue));
     border-radius: 15pt;
     padding: 3rem;
     margin-top: 20px;
-
-    background-color: white;
+    transition: none;
+}
+.item-open {
+    background-image: linear-gradient(var(--dark-true-blue), var(--true-blue));
+}
+.flash-item {
+    transition: background-color 10s;
+    background-image: none;
+    background-color: #FF0000;
 }
 .piece {
     font-size: 4.5vw;
@@ -154,12 +164,7 @@ body {
     font-style: italic;
     padding-top: 10px;
 }
-.program-notes hr {
-    width: 75%;
-    margin: 30px auto 30px auto;
-    border-color: white;
-}
-.info {
+.program-notes {
     font-size: 4.5vw;
     text-align: justify;
 
@@ -169,11 +174,17 @@ body {
     transition: height var(--note-open-duration);
     overflow: hidden;
 }
-#note-inset {
-    display: flex;
-    justify-content: center;
-    font-size: 3.25vw;
+.note-container hr {
+    width: 75%;
+    margin: 30px auto 30px auto;
+    border-color: white;
 }
+.note-inset {
+    font-size: 3.25vw;
+    margin-left: 5%;
+    margin-right: 0%;
+}
+
 .fade-footer {
     opacity: 0;
     animation: fade-in;

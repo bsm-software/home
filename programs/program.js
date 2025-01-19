@@ -1,23 +1,25 @@
 function toggle(id) {
-    let content = document.getElementById(id);
+    let item = document.getElementById(id);
 
-    if (content.classList.contains('open')) {
+    if (item.classList.contains('item-open')) {
         conceal(id);
     } else {
         reveal(id);
     }
 }
 function reveal(id) {
-    let content = document.getElementById(id);
-    if (content.classList.contains('open')) {
+    let item = document.getElementById(id);
+
+    if (item.classList.contains('item-open')) {
         return;
     }
 
-    let programNotes = content.children.item(0);
-    let height = programNotes.offsetHeight;
+    let programNotes = item.getElementsByClassName("program-notes")[0];
+    let container = programNotes.getElementsByClassName("note-container")[0];
+    let height = container.offsetHeight;
 
-    for (i = 0; i < programNotes.children.length; i++) {
-        let child = programNotes.children.item(i);
+    for (i = 0; i < container.children.length; i++) {
+        let child = container.children.item(i);
         if (child.classList.contains('separator')) {
             height += child.offsetHeight;
             let style = getComputedStyle(child);
@@ -26,32 +28,36 @@ function reveal(id) {
         }
     }
 
-    content.setAttribute('style', 'height: ' + height + 'px;');
-    content.classList.add('open');
-
-    let item = content.parentElement;
-    item.style.backgroundImage = "linear-gradient(var(--dark-true-blue), var(--true-blue))";
+    programNotes.style.height = (height + "px");
+    item.classList.add('item-open');
 }
 function conceal(id) {
-    let content = document.getElementById(id);
-    if (content.classList.contains('open') == false) {
+    let item = document.getElementById(id);
+
+    if (item.classList.contains('item-open') == false) {
         return;
     }
 
-    content.setAttribute('style', 'height: 0px');
-    content.classList.remove('open');
+    let programNotes = item.getElementsByClassName("program-notes")[0];
 
-    let item = content.parentElement;
-    item.style.backgroundImage = "linear-gradient(var(--true-blue), var(--dark-true-blue))";
+    programNotes.style.height = "0px";
+    item.classList.remove('item-open');
 }
 function secret(id) {
-    const hour = 11;
-    const min = 26;
+    const hour = 8;
+    const min = 45;
+    const div = "pm"
 
     let now = new Date(Date());
-    let mHour = 24 - (12 - hour);
+    let mHour = hour;
 
-    let sameHourTrigger = now.getHours() == mHour && now.getMinutes() >= min;
+    if (div === "pm" && hour < 12) {
+        mHour += 12;
+    } else if (div === "am" && hour === 12) {
+        mHour = 0;
+    }
+
+    let sameHourTrigger = now.getHours() === mHour && now.getMinutes() >= min;
     let nextHourTrigger = now.getHours() > mHour;
 
     if (sameHourTrigger || nextHourTrigger) {
@@ -64,17 +70,15 @@ function secret(id) {
 }
 
 function updateTitle(id, newName) {
-    let content = document.getElementById(id);
-    let item = content.parentElement;
+    let item = document.getElementById(id);
     let piece = item.getElementsByClassName("title")[0];
-    piece.innerHTML = newName;
+    piece.textContent = newName;
 }
 function flashItem(id) {
-    let content = document.getElementById(id);
-    let item = content.parentElement;
+    let item = document.getElementById(id);
+    if (item.classList.contains("flash-item")) {
+        return;
+    }
 
-    item.style.backgroundColor = "white";
-    item.style.transition = "background-color 10s";
-    item.style.backgroundImage = "none";
-    item.style.backgroundColor = "#FF0000";
+    item.classList.add("flash-item");
 }
