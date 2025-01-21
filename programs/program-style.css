@@ -15,7 +15,8 @@ body {
     --reveal-delay-3: 1.8s;
     --reveal-delay-4: 2.2s;
 
-    --note-open-duration: 1s;
+    --note-open-duration: 0.75s;
+    --flash-duration: 8s;
 }
 
 @keyframes fade-in {
@@ -140,9 +141,9 @@ body {
     background-image: linear-gradient(var(--dark-true-blue), var(--true-blue));
 }
 .flash-item {
-    transition: background-color 10s;
+    transition: background-color var(--flash-duration);
     background-image: none;
-    background-color: #FF0000;
+    background-color: #F00000;
 }
 .piece {
     font-size: 4.5vw;
@@ -172,6 +173,7 @@ body {
     padding: 0px;
     margin: 0px;
     transition: height var(--note-open-duration);
+    transition-timing-function: ease-in-out;
     overflow: hidden;
 }
 .note-container hr {
@@ -185,7 +187,7 @@ body {
     margin-right: 0%;
 }
 
-.fade-footer {
+footer {
     opacity: 0;
     animation: fade-in;
     animation-fill-mode: forwards;
