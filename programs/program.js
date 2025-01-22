@@ -46,14 +46,14 @@ function conceal(id) {
 function secret(id) {
     const hour = 8;
     const min = 45;
-    const div = "pm"
+    const meridiem = "pm"
 
-    let now = new Date(Date());
+    let now = new Date();
     let mHour = hour;
 
-    if (div === "pm" && hour < 12) {
+    if (meridiem === "pm" && hour < 12) {
         mHour += 12;
-    } else if (div === "am" && hour === 12) {
+    } else if (meridiem === "am" && hour === 12) {
         mHour = 0;
     }
 
